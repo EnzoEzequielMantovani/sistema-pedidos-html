@@ -7,31 +7,33 @@
 <body>  
 
     <h1>Sistema de pedidos</h1>
-    <form>
-        <label>Numero de pedido</label>
-        <input type="number" placeholder="Tu Numero"><br><br>
-        
-        <label>Cliente</label>
-        <input type="text" placeholder="Tu nombre"><br><br>
-
-        <label>Direccion</label>
-        <input type="text" placeholder="Tu Direccion"><br><br>
-
-        <label>Estado</label><br>
-        <select>
-            <option>Pendiente</option>
-            <option>En Camino</option>
-            <option>Entregado</option>
-        </select><br>
-        
-        <button>Agregar pedido</button>
-    </form>
-
     <h2>Enzo Mantovani</h2>
+    
+    <form>
+        <label for="numero-de-pedido">Número de pedido</label><br>
+        <input type="number" id="numero-de-pedido" placeholder="Tu Número"><br><br>
+        
+        <label for="cliente">Cliente</label><br>
+        <input type="text" id="cliente" placeholder="Tu nombre"><br><br>
+
+        <label for="direccion">Dirección</label><br>
+        <input type="text" id="direccion"  placeholder="Tu Dirección"><br><br>
+
+        <label for="fecha-de-entrega">Fecha de entrega</label><br>
+        <input type="date" id="fecha-de-entrega"><br><br>
+
+        <label for="estado">Estado</label><br>
+        <select id="estado">
+            <option>Pendiente</option>
+            <option>En camino</option>
+            <option>Entregado</option>
+        </select><br><br>
+    <button type="submit">Agregar pedido</button>
+    </form>
 
     <ul>
         <li>Pedido #001 - Juan - Pendiente</li>
-        <li>Pedido #002 - Maria - En camino</li>
+        <li>Pedido #002 - María - En camino</li>
         <li>Pedido #003 - Pedro - Entregado</li>
     </ul>
 
