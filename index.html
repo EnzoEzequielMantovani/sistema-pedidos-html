@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Sistema de pedidos</title>
-    <link rel="stylesheet" href="styles.css">
+<html lang="es" translate="no">                            <!--Lenguaje y Traducir-->
+<head>                                                     <!--Es lo que no se ve-->
+    <meta charset="UTF-8">                                 <!--Para ver la N-->
+    <title>Sistema de pedidos</title>                      <!--Titulo de la pestana-->
+    <link rel="stylesheet" href="styles.css">              <!--Conecta con CSS. link enlaza, rel le dice al nav, href es la ruta-->
 </head>
 <body>  
 
-    <h1>Sistema de pedidos</h1>
-    <h2>Enzo Mantovani</h2>
+    <h1>Sistema de pedidos</h1>                            <!--Titulo-->
+    <h2>Enzo Mantovani</h2>                                <!--Subtitulo-->
     
     <form>
-        <label for="numero-de-pedido">Número de pedido</label><br>
-        <input type="number" id="numero-de-pedido" placeholder="Tu Número"><br><br>
+        <label for="numero-de-pedido">Número de pedido</label><br>  
+<!-- Label: texto que describe el campo. El atributo "for" debe coincidir 
+     con el "id" del input para que al hacer click en el texto se active el campo -->
+        <input type="number" id="numero-de-pedido" name="numeroPedido" placeholder="Tu Número"><br><br>
+<!-- Input: campo donde el usuario ingresa el dato.
+     type="number" permite solo números.
+     id="numero-de-pedido" lo identifica (lo usa el label, JS y CSS).
+     name= es el nombre con el que se envía el dato del input al backend (formulario)
+     placeholder muestra un ejemplo dentro del campo (no se guarda ni se envía) -->
         
         <label for="cliente">Cliente</label><br>
-        <input type="text" id="cliente" placeholder="Tu nombre"><br><br>
+        <input type="text" id="cliente" name="cliente" placeholder="Tu nombre" required><br><br>
 
         <label for="direccion">Dirección</label><br>
-        <input type="text" id="direccion"  placeholder="Tu Dirección"><br><br>
+        <input type="text" id="direccion"  name="direccion" placeholder="Tu Dirección" required><br><br>
 
         <label for="fecha-de-entrega">Fecha de entrega</label><br>
-        <input type="date" id="fecha-de-entrega"><br><br>
+        <input type="date" id="fecha-de-entrega" name="fechaDeEntrega" required><br><br>
 
         <label for="estado">Estado</label><br>
-        <select id="estado">
+<!-- Label: texto que indica qué dato debe seleccionar el usuario.
+     El atributo "for" se conecta con el "id" del select para que al hacer click en "Estado" se active el desplegable -->
+        <select id="estado" name="estado" required>
+<!-- Option: cada una de las opciones que el usuario puede elegir -->
             <option>Pendiente</option>
             <option>En camino</option>
             <option>Entregado</option>
+<!-- Select: menú desplegable donde el usuario elige una opción.
+     id="estado" lo identifica (lo usa el label, JS y CSS).
+     name="estado" es el nombre con el que se envía el dato al backend.
+     required obliga a seleccionar una opción antes de enviar el formulario -->
+
         </select><br><br>
     <button type="submit">Agregar pedido</button>
     </form>
@@ -38,7 +53,7 @@
         <li>Pedido #003 - Pedro - Entregado</li>
     </ul>
 
-<button>Procesar pedidos</button>
+<button type="button">Procesar pedidos</button>
 
 </body>
 </html>
